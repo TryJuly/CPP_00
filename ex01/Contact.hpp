@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 09:44:22 by strieste          #+#    #+#             */
-/*   Updated: 2026/02/04 14:04:45 by strieste         ###   ########.fr       */
+/*   Updated: 2026/02/05 11:53:31 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define CONTACT_HPP
 
 # include <string>
-# include "iostream"
+# include <iostream>
+# include <iomanip>
 
 class	Contact
 {
@@ -22,9 +23,10 @@ class	Contact
 		Contact();
 		~Contact();
 		
-		void	newContact();
-		void	print();
-		void	printAll();
+		void		newContact();
+		void		printOne();
+		void		printAll(int count);
+		std::string	stringSize(std::string str);
 	private:
 		std::string	_name;
 		std::string	_secret;

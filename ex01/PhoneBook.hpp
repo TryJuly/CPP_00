@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:55:49 by strieste          #+#    #+#             */
-/*   Updated: 2026/02/04 14:11:31 by strieste         ###   ########.fr       */
+/*   Updated: 2026/02/05 11:00:31 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PHONEBOOK_HPP
 
 #include "Contact.hpp"
+#include <iostream>
 
 class	PhoneBook
 {
@@ -21,8 +22,9 @@ class	PhoneBook
 		PhoneBook();
 		~PhoneBook();
 		
-		void	add_new(int number);
-		void	print();
+		void	addNew(int number);
+		void	printContact(int number);
+		void	searchContact(int number);
 	private:
 	Contact _contact[8];
 };
