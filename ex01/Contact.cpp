@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 09:44:19 by strieste          #+#    #+#             */
-/*   Updated: 2026/02/05 13:53:16 by strieste         ###   ########.fr       */
+/*   Updated: 2026/02/06 21:35:16 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,13 @@ void	Contact::printAll(int count)
 {
 	std::string	buff;
 	
-	std::cout << std::setw(15 - 1) << count << "|";
+	std::cout << std::setw(12) << count << std::right << "|";
 	buff = stringSize(this->_name);
-	std::cout << std::setw(15 - buff.length()) << buff << "|";
+	std::cout << std::setw(12) << buff << std::right << "|";
 	buff = stringSize(this->_lastname);
-	std::cout << std::setw(15 - buff.length()) << buff << "|";
+	std::cout << std::setw(12) << buff << std::right << "|";
 	buff = stringSize(this->_nickname);
-	std::cout << std::setw(15 - buff.length()) << buff << std::endl;
+	std::cout << std::setw(12) << buff << std::right << "|" << std::endl;
 }
 
 std::string	Contact::stringSize(std::string str)

@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 14:02:25 by strieste          #+#    #+#             */
-/*   Updated: 2026/02/05 13:55:38 by strieste         ###   ########.fr       */
+/*   Updated: 2026/02/07 11:00:10 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	main(void)
 {
 	std::string	command;
 	PhoneBook	phone_book;
-	int			number;
 	int			index;
+	int			number;
 	
-	number = 0;
 	index = 0;
+	number = 0;
 	while (1)
 	{
 		std::cout << "Enter your command : " << std::endl;
@@ -47,9 +47,9 @@ int	main(void)
 	return (0);
 }
 
-void	add_contact(PhoneBook *phone_book, int number)
+void	add_contact(PhoneBook *phone_book, int index)
 {
-	(*phone_book).addNew(number);
+	(*phone_book).addNew(index);
 	return ;
 }
 
@@ -57,11 +57,11 @@ void	search_contact(PhoneBook *phone_book, int number)
 {
 	if (number > 0)
 	{
-		(*phone_book).searchContact(number);
-		(*phone_book).printContact(number);
+		(*phone_book).searchContact();
+		(*phone_book).printContact();
 	}
 	else
-		std::cout << "\033[31mNo contact found\033[0m" << std::endl;
+		std::cout << "\033[31mNo contact in PhoneBook !\033[0m" << std::endl;
 	return ;
 }
 

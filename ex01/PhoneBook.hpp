@@ -6,15 +6,14 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:55:49 by strieste          #+#    #+#             */
-/*   Updated: 2026/02/05 11:00:31 by strieste         ###   ########.fr       */
+/*   Updated: 2026/02/07 11:01:03 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-#include "Contact.hpp"
-#include <iostream>
+# include "Contact.hpp"
 
 class	PhoneBook
 {
@@ -23,10 +22,11 @@ class	PhoneBook
 		~PhoneBook();
 		
 		void	addNew(int number);
-		void	printContact(int number);
-		void	searchContact(int number);
+		void	printContact(void);
+		void	searchContact(void);
 	private:
-	Contact _contact[8];
+		int		_nb_contact;
+		Contact _contact[8];
 };
 
 #endif
