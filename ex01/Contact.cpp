@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 09:44:19 by strieste          #+#    #+#             */
-/*   Updated: 2026/02/06 21:35:16 by strieste         ###   ########.fr       */
+/*   Updated: 2026/03/02 11:08:31 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,43 @@ void	Contact::newContact(void)
 	std::cout << std::endl;
 	std::cout << "First name : ";
 	std::cin >> this->_name;
+	if (std::cin.eof())
+	{
+		std::cout << "CTRL D pressed\n" << std::endl;
+		return ;
+	}
 	std::cout << std::endl;
 	std::cout << "Lastname : ";
 	std::cin >> this->_lastname;
+	if (std::cin.eof())
+	{
+		std::cout << "CTRL D pressed\n" << std::endl;
+		return ;
+	}
 	std::cout << std::endl;
 	std::cout << "Nickname : ";
 	std::cin >> this->_nickname;
+	if (std::cin.eof())
+	{
+		std::cout << "CTRL D pressed\n" << std::endl;
+		return ;
+	}
 	std::cout << std::endl;
 	std::cout << "Phone number : ";
 	std::cin >> this->_phone_number;
+	if (std::cin.eof())
+	{
+		std::cout << "CTRL D pressed\n" << std::endl;
+		return ;
+	}
 	std::cout << std::endl;
 	std::cout << "The darkest secret : ";
 	std::cin >> this->_secret;
+	if (std::cin.eof())
+	{
+		std::cout << "CTRL D pressed\n" << std::endl;
+		return ;
+	}
 	std::cout << std::endl;
 	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 14:02:25 by strieste          #+#    #+#             */
-/*   Updated: 2026/02/07 11:00:10 by strieste         ###   ########.fr       */
+/*   Updated: 2026/03/02 11:06:33 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ int	main(void)
 	{
 		std::cout << "Enter your command : " << std::endl;
 		std::cin >> command;
+		if (std::cin.eof())
+		{
+			std::cout << "CTRL D pressed\n" << std::endl;
+			return (1);
+		}
 		if (!command.compare("ADD"))
 		{
 			add_contact(&phone_book, index);

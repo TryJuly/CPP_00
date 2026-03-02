@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:18:01 by strieste          #+#    #+#             */
-/*   Updated: 2026/02/07 10:50:30 by strieste         ###   ########.fr       */
+/*   Updated: 2026/03/02 11:10:28 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,6 @@ void	PhoneBook::addNew(int number)
 	return ;
 }
 
-// PhoneBook::~PhoneBook(void)
-// {}
-
 void	PhoneBook::printContact(void)
 {
 	int	index;
@@ -41,6 +38,11 @@ void	PhoneBook::printContact(void)
 	std::cin >> index;
 	while (std::cin.fail() || (index < 1 || (index - 1) >= this->_nb_contact))
 	{
+		if (std::cin.eof())
+		{
+			std::cout << "CTRL D pressed\n" << std::endl;
+			return ;
+		}
 		if (std::cin.fail())
 		{
 			std::cin.clear();
